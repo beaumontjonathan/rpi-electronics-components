@@ -1,0 +1,35 @@
+{
+  "name": "rpi-electronics-components",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:beaumontjonathan/rpi-electronics-components.git",
+  "author": "beaumontjonathan <beaumont_jonny@hotmail.co.uk>",
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "yarn build:js && yarn clean && mkdir dist && cp -r ./build/* ./dist",
+    "clean": "rm -rf ./dist",
+    "build:js": "babel ./src --out-dir build --source-maps --extensions \".ts,.tsx,.js\""
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/jest": "^24.0.11",
+    "babel-jest": "^24.5.0",
+    "babel-loader": "^8.0.5",
+    "babel-polyfill": "^6.26.0",
+    "jest": "^24.5.0",
+    "typescript": "^3.3.4000"
+  },
+  "dependencies": {
+    "@types/onoff": "^3.2.1",
+    "lcd": "^2.0.5",
+    "onoff": "^4.1.1",
+    "require-mock": "^0.0.1",
+    "rxjs": "^6.4.0",
+    "sleep-promise": "^8.0.1"
+  }
+}
