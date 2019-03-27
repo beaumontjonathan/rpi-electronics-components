@@ -1,9 +1,7 @@
-function add(x: number, y: number) {
-  return x + y;
-}
+import * as rpiElectronicsComponents from '.';
 
 describe('index', () => {
-  it('should pass', () => {
-    // expect(add(1, 2)).toBe(4);
+  it('should match snapshot', () => {
+    expect(rpiElectronicsComponents).toMatchSnapshot();
   });
 });

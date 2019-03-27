@@ -75,7 +75,6 @@ export class Button {
 
   private ensureNotReleased(message: string = 'Button pin already released'): void {
     if (this.released) {
-      console.log('here', this.released);
       throw new Error(message);
     }
   }
