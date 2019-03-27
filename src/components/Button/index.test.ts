@@ -1,10 +1,12 @@
 import { Button } from '.';
 
 const mockWatch = jest.fn();
+const mockUnexport = jest.fn();
 
 jest.mock('onoff', () => ({
   Gpio: class Gpio {
     watch = mockWatch;
+    unexport = mockUnexport;
   },
 }));
 
@@ -16,6 +18,7 @@ describe('Button', () => {
   beforeEach(() => {
     b = new Button({ pinId: 4 });
     mockWatch.mockReset();
+    mockUnexport.mockReset();
   });
 
   describe('#getPin', () => {
@@ -50,6 +53,23 @@ describe('Button', () => {
       await p1;
       const end = Date.now();
       expect(end - start).toBeGreaterThanOrEqual(debounce);
+    });
+
+    it('should throw an error if released', async () => {
+      b.releasePin();
+      await expect(b.onClick()).rejects.toEqual(Error('Button pin already released'));
+    });
+  });
+
+  describe('#releasePin', () => {
+    it('should reject existing promises', async () => {
+      const p = b.onClick();
+      b.releasePin();
+      await expect(p).rejects.toEqual(new Error('Button released'));
+    });
+
+    it('should throw an error', () => {
+
     });
   });
 });
