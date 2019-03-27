@@ -29,8 +29,6 @@
     "@types/onoff": "^3.2.1",
     "lcd": "^2.0.5",
     "onoff": "^4.1.1",
-    "require-mock": "^0.0.1",
-    "rxjs": "^6.4.0",
-    "sleep-promise": "^8.0.1"
+    "rxjs": "^6.4.0"
   }
 }

@@ -3788,11 +3788,6 @@ require-main-filename@^1.0.1:
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
   integrity sha1-l/cXtp1IeE9fUmpsWqj/3aBVpNE=
 
-require-mock@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/require-mock/-/require-mock-0.0.1.tgz#9032de3956875ad355261007742fc3680bce1bbe"
-  integrity sha1-kDLeOVaHWtNVJhAHdC/DaAvOG74=
-
 resolve-cwd@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/resolve-cwd/-/resolve-cwd-2.0.0.tgz#00a9f7387556e27038eae232caa372a6a59b665a"
@@ -3944,11 +3939,6 @@ slash@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-2.0.0.tgz#de552851a1759df3a8f206535442f5ec4ddeab44"
   integrity sha512-ZYKh3Wh2z1PpEXWr0MpSBZ0V6mZHAQfYevttO11c51CaWjGTaadiKZ+wVt1PbMlDV5qhMFslpZCemhwOK7C89A==
-
-sleep-promise@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/sleep-promise/-/sleep-promise-8.0.1.tgz#8d795a27ea23953df6b52b91081e5e22665993c5"
-  integrity sha1-jXlaJ+ojlT32tSuRCB5eImZZk8U=
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
