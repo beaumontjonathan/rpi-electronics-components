@@ -8,7 +8,8 @@
   "scripts": {
     "prepublish": "yarn build:js && yarn clean && mkdir dist && cp -r ./build/* ./dist",
     "clean": "rm -rf ./dist",
-    "build:js": "babel ./src --out-dir build --source-maps --extensions \".ts,.tsx,.js\""
+    "build:js": "babel ./src --out-dir build --source-maps --extensions \".ts,.tsx,.js\"",
+    "test": "yarn jest --root-dir=src"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
