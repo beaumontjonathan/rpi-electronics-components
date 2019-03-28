@@ -1,7 +1,8 @@
 {
   "name": "rpi-electronics-components",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": "git@github.com:beaumontjonathan/rpi-electronics-components.git",
   "author": "beaumontjonathan <beaumont_jonny@hotmail.co.uk>",
   "license": "MIT",
