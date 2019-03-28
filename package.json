@@ -1,6 +1,6 @@
 {
   "name": "rpi-electronics-components",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "repository": "git@github.com:beaumontjonathan/rpi-electronics-components.git",
   "author": "beaumontjonathan <beaumont_jonny@hotmail.co.uk>",
