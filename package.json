@@ -12,9 +12,10 @@
     "build:js": "babel ./src --out-dir build --source-maps --extensions \".ts,.tsx,.js\"",
     "build:types": "tsc",
     "build": "yarn clean:build && yarn build:js && yarn build:types",
-    "prepublish": "yarn build && yarn clean:dist && mkdir dist && cp -r ./build/* ./dist",
+    "build:dist": "yarn build && yarn clean:dist && mkdir dist && cp -r ./build/* ./dist",
     "buildCommit": "git add . && git commit -m \"Build commit\"",
-    "patch": "yarn prepublish && yarn buildCommit && npm version patch && npm publish && git push",
+    "major": "yarn build:dist && yarn buildCommit && npm version major && yarn publish && git push",
+    "patch": "yarn build:dist && yarn buildCommit && npm version patch && npm publish && git push",
     "test": "yarn jest --root-dir=src"
   },
   "devDependencies": {
