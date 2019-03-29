@@ -14,7 +14,7 @@
     "build": "yarn clean:build && yarn build:js && yarn build:types",
     "prepublish": "yarn build && yarn clean:dist && mkdir dist && cp -r ./build/* ./dist",
     "git:precommit": "git add . && git commit -m \"Build commit\"",
-    "patch": "yarn prepublish && git:precommit && npm version patch && npm publish && git push",
+    "patch": "yarn prepublish && yarn git:precommit && npm version patch && npm publish && git push",
     "test": "yarn jest --root-dir=src"
   },
   "devDependencies": {
