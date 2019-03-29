@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index should match snapshot 1`] = `
+Object {
+  "BUTTON_STATE": Object {
+    "DOWN": 1,
+    "UNKNOWN": -1,
+    "UP": 0,
+  },
+  "Button": [Function],
+}
+`;

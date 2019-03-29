@@ -1,0 +1,41 @@
+{
+  "name": "rpi-electronics-components",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "git@github.com:beaumontjonathan/rpi-electronics-components.git",
+  "author": "beaumontjonathan <beaumont_jonny@hotmail.co.uk>",
+  "license": "MIT",
+  "scripts": {
+    "clean:dist": "rm -rf ./dist",
+    "clean:build": "rm -rf ./build",
+    "build:js": "babel ./src --out-dir build --source-maps --extensions \".ts,.tsx,.js\"",
+    "build:types": "tsc",
+    "build": "yarn clean:build && yarn build:js && yarn build:types",
+    "build:dist": "yarn build && yarn clean:dist && mkdir dist && cp -r ./build/* ./dist",
+    "buildCommit": "git add . && git commit -m \"Build commit\"",
+    "major": "yarn build:dist && yarn buildCommit && npm version major && yarn publish && git push",
+    "patch": "yarn build:dist && yarn buildCommit && npm version patch && npm publish && git push",
+    "test": "yarn jest --root-dir=src"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/jest": "^24.0.11",
+    "babel-jest": "^24.5.0",
+    "babel-loader": "^8.0.5",
+    "babel-polyfill": "^6.26.0",
+    "jest": "^24.5.0",
+    "typescript": "^3.3.4000"
+  },
+  "dependencies": {
+    "@types/onoff": "^3.2.1",
+    "lcd": "^2.0.5",
+    "onoff": "^4.1.1",
+    "rxjs": "^6.4.0"
+  }
+}

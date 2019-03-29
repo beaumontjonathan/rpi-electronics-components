@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "target": "esnext",
+    "moduleResolution": "node",
+    //    "allowJs": T,
+    //    "noEmit": true,
+    //    "strict": true,
+    "esModuleInterop": true,
+    //    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "outDir": "./build/",
+    "lib": ["dom", "es2018"],
+
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+
+    "declaration": true,
+    "emitDeclarationOnly": true
+  },
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts"
+  ]
+}
