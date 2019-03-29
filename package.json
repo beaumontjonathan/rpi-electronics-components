@@ -7,9 +7,14 @@
   "author": "beaumontjonathan <beaumont_jonny@hotmail.co.uk>",
   "license": "MIT",
   "scripts": {
-    "prepublish": "yarn build:js && yarn clean && mkdir dist && cp -r ./build/* ./dist",
-    "clean": "rm -rf ./dist",
+    "clean:dist": "rm -rf ./dist",
+    "clean:build": "rm -rf ./build",
     "build:js": "babel ./src --out-dir build --source-maps --extensions \".ts,.tsx,.js\"",
+    "build:types": "tsc",
+    "build": "yarn clean:build && yarn build:js && yarn build:types",
+    "prepublish": "yarn build && yarn clean:dist && mkdir dist && cp -r ./build/* ./dist",
+    "git:precommit": "git add . && git commit -m \"Build commit\"",
+    "patch": "yarn prepublish && git:precommit && npm version patch && npm publish && git push",
     "test": "yarn jest --root-dir=src"
   },
   "devDependencies": {

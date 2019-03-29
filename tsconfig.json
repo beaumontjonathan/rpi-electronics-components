@@ -10,7 +10,7 @@
     //    "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "preserve",
-    "outDir": "./dist/",
+    "outDir": "./build/",
     "lib": ["dom", "es2018"],
 
     "forceConsistentCasingInFileNames": true,
