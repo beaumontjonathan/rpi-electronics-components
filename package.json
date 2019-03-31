@@ -15,6 +15,7 @@
     "build:dist": "yarn build && yarn clean:dist && mkdir dist && cp -r ./build/* ./dist",
     "buildCommit": "git add . && git commit -m \"Build commit\"",
     "major": "yarn build:dist && yarn buildCommit && npm version major && yarn publish && git push",
+    "minor": "yarn build:dist && yarn buildCommit && npm version minor && yarn publish && git push",
     "patch": "yarn build:dist && yarn buildCommit && npm version patch && npm publish && git push",
     "test": "yarn jest --root-dir=src"
   },
